@@ -65,6 +65,7 @@ const Upload = () => {
         await kv.set(`resume:${uuid}`, JSON.stringify(data))
         setstatusText('Analysis complete, redirecting')
         console.log(data)
+        navigate(`/resume/${uuid}`)
     }
 
     const handlesubmit = (e: FormEvent<HTMLFormElement>)=>{
